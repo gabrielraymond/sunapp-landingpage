@@ -1,3 +1,4 @@
+@import url("http://fonts.cdnfonts.com/css/gotham");
 .main {
   width: 100%;
   height: calc(100vh);
@@ -6,6 +7,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left;
+  font-family: "Gotham", sans-serif;
 }
 
 .container {
@@ -29,6 +31,7 @@
 .textdesc {
   font-weight: 400;
   font-size: 21px;
+  font-family: "Gotham", sans-serif;
 }
 
 .textdesc span {
@@ -67,6 +70,7 @@
 
 .footer h4 {
   margin: 0;
+  font-family: "Gotham", sans-serif;
 }
 
 @media only screen and (max-width: 1024px) {

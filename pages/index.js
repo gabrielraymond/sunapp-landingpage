@@ -22,8 +22,18 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>SUN EDUCATION APPS</title>
+        <title>
+          SUN Education Mobile App - Cara Mudah Kuliah ke Luar Negeri!
+        </title>
         <link rel="icon" href="/images/fav.png" />
+        <meta
+          name="SUN Education Mobile App"
+          content="SUN Education Mobile App, The FIRST overseas education app in Indonesia! Dapatkan info beasiswa dan segala info menarik lainnya. DOWNLOAD NOW"
+        />
+        <meta
+          name="SUN Education App"
+          content="Temukan berbagai informasi penting dan menarik untuk persiapan studi ke luar negeri-mu! Dapatkan info beasiswa hingga diskon spesial hanya di SUN Education Mobile App."
+        />
       </Head>
       <main className={styles.main}>
         <div className={styles.container}>
