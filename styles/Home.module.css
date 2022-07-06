@@ -65,7 +65,7 @@
   z-index: 30;
 }
 
-.footer h4{
+.footer h4 {
   margin: 0;
 }
 
@@ -84,6 +84,10 @@
   .main {
     background-position: top;
     background-size: 33rem;
+  }
+
+  .pickMobile {
+    display: none;
   }
 
   .container {
