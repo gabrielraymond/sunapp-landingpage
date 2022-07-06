@@ -6,15 +6,17 @@ import styles from "../styles/Home.module.css";
 export default function Home() {
   const [deviceType, setDeviceType] = useState("");
   const [gab, setGab] = useState("");
+  const [isIPhone, setIsIphone] = useState(false);
 
   useEffect(() => {
     if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
       setDeviceType("Mobile");
-      console.log("mobile");
+      console.log("iphone");
+      setIsIphone(true);
     } else {
-      console.log(navigator.userAgent);
       setDeviceType("Desktop");
-      console.log("desktop");
+      console.log("not iphone");
+      setIsIphone(false);
     }
     setGab(navigator.userAgent);
   }, []);
@@ -26,7 +28,6 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.container}>
-          <p>{gab}</p>
           <div className={styles.image}>
             {/* <Image
               src="/images/sunApp.png"
@@ -61,7 +62,13 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <a href={""}>
+              <a
+                href={
+                  isIPhone
+                    ? "https://apps.apple.com/id/app/sun-education-group/id1446868544?l=id"
+                    : "https://play.google.com/store/apps/details?id=com.sunedu.app&hl=en&gl=US"
+                }
+              >
                 <img
                   src="/images/UNDUH SEKARANG.png"
                   alt="google play"
