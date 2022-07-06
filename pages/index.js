@@ -1,13 +1,13 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import MobileDetect from "mobile-detect";
+import UserAgent from "user-agents";
 
 export default function Home() {
-  var md = new MobileDetect(
-    "Mozilla/5.0 (Linux; U; Android 4.0.3; en-in; SonyEricssonMT11i" +
-      " Build/4.1.A.0.562) AppleWebKit/534.30 (KHTML, like Gecko)" +
-      " Version/4.0 Mobile Safari/534.30"
-  );
+  const userAgent = new UserAgent();
+  // var userAgent = navigator.userAgent.toLowerCase();
+  // console.log(userAgent.toString());
+  const gab = JSON.stringify(userAgent.data, null, 2);
+  console.log(JSON.stringify(userAgent.data, null, 2));
   return (
     <div>
       <Head>
@@ -16,6 +16,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.container}>
+          <p>{gab}</p>
           <div className={styles.image}>
             {/* <Image
               src="/images/sunApp.png"
@@ -50,13 +51,7 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <a
-                href={
-                  md.is("iPhone")
-                    ? "https://apps.apple.com/id/app/sun-education-group/id1446868544?l=id"
-                    : "https://play.google.com/store/apps/details?id=com.sunedu.app&hl=en&gl=US"
-                }
-              >
+              <a href={""}>
                 <img
                   src="/images/UNDUH SEKARANG.png"
                   alt="google play"
