@@ -72,6 +72,7 @@
 @media only screen and (max-width: 1024px) {
   .main {
     background-size: 70vw;
+    background-image: url("/images/hand mobile.png");
   }
 
   .bg1 {
@@ -82,7 +83,7 @@
 @media only screen and (max-width: 760px) {
   .main {
     background-position: top;
-    background-size: 21rem;
+    background-size: 35rem;
   }
 
   .container {
