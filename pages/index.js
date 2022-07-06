@@ -61,7 +61,7 @@ export default function Home() {
         />
 
         <img
-          src="/images/blur atas.png"
+          src="/images/Blur atas.png"
           alt="icon-blur"
           className={styles.bg2}
         />
