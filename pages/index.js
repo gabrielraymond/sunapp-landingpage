@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
-// import UserAgent from "user-agents";
 
 export default function Home() {
   const [deviceType, setDeviceType] = useState("");
