@@ -1,13 +1,23 @@
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
-import UserAgent from "user-agents";
+// import UserAgent from "user-agents";
 
 export default function Home() {
-  const userAgent = new UserAgent();
-  // var userAgent = navigator.userAgent.toLowerCase();
-  // console.log(userAgent.toString());
-  const gab = JSON.stringify(userAgent.data, null, 2);
-  console.log(JSON.stringify(userAgent.data, null, 2));
+  const [deviceType, setDeviceType] = useState("");
+  const [gab, setGab] = useState("");
+
+  useEffect(() => {
+    if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      setDeviceType("Mobile");
+      console.log("mobile");
+    } else {
+      console.log(navigator.userAgent);
+      setDeviceType("Desktop");
+      console.log("desktop");
+    }
+    setGab(navigator.userAgent);
+  }, []);
   return (
     <div>
       <Head>
